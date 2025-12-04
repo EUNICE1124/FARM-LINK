@@ -17,7 +17,7 @@ document.getElementById('farmLinkForm').addEventListener('submit', function(even
         return;
     }
 
-    // In a real application, you would send this data to a server
+    //  send this data to a server
     // Example: fetch('/api/register', { method: 'POST', body: JSON.stringify({ fullName, province, district, city }) });
 
     alert('Registration Complete! (Simulated)');
