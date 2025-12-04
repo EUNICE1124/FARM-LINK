@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmLink Welcome</title>
+    <link rel="stylesheet" href="/Front_end/CSS/log_in_2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="welcome-container">
+        <div class="header-section">
+            <div class="user-icon-bg">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1 class="greeting">HELLO!</h1>
+            <p class="welcome-text">Welcome to **FarmLink**</p>
+        </div>
+
+        <div class="input-card">
+            <form id="farmLinkForm">
+                <div class="input-group">
+                    <input type="text" id="fullName" placeholder="Full Name">
+                </div>
+
+                <label for="location" class="location-label">Location</label>
+
+                <div class="location-input-group">
+                    <input type="text" id="province" placeholder="Province" class="location-input left-rounded">
+                    <input type="text" id="district" placeholder="District" class="location-input">
+                    <input type="text" id="city" placeholder="City" class="location-input right-rounded">
+                </div>
+
+                <button type="submit" class="continue-btn">Continue</button>
+            </form>
+
+            <a href="#" class="skip-link">Skip for now</a>
+        </div>
+    </div>
+
+    <script src="/Front_end/JS/log_in_2.js"></script>
+</body>
+
+</html>

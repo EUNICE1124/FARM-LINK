@@ -1,0 +1,165 @@
+/* --- Reused Core Styles --- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    /* Typical mobile width */
+    height: 100vh;
+    max-height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* --- Header Section (Green Area) --- */
+
+.header-section {
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px 20px 180px;
+    /* Large bottom padding for card overlap */
+    position: relative;
+    z-index: 1;
+}
+
+.user-icon-bg.small {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-icon-bg.small i {
+    font-size: 20px;
+    color: white;
+}
+
+.greeting {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.welcome-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0 0;
+}
+
+
+/* --- Input Card Section (White Area) --- */
+
+.input-card {
+    background-color: white;
+    padding: 30px 25px;
+    position: absolute;
+    top: 150px;
+    /* Adjust top position for the specific layout */
+    left: 0;
+    right: 0;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.section-title {
+    color: #4CAF50;
+    /* Green title */
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+/* --- Input Groups with Icons --- */
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    /* Use flexbox for icon and input alignment */
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #F0FFF0;
+    /* Light green background */
+    border-radius: 10px;
+}
+
+.input-group.icon-input i {
+    color: #4CAF50;
+    /* Green icon color */
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.input-group input {
+    flex-grow: 1;
+    /* Input takes up the rest of the space */
+    padding: 10px 0;
+    border: none;
+    background: none;
+    /* Make input background transparent */
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    /* Remove focus outline */
+}
+
+.input-group input::placeholder {
+    color: #888;
+}
+
+
+/* --- Sign Up Button and Links --- */
+
+.continue-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.continue-btn:hover {
+    background-color: #45a049;
+}
+
+.login-link-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.login-link {
+    color: #4CAF50;
+    /* Green link color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

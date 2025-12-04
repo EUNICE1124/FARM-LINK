@@ -1,186 +1,76 @@
-/* General Reset/Setup */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    /* Use a common font */
-    background-color: #f0f0f0;
-    /* Light background for the page outside the app */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-
-/* --- App Container (The main dark background) --- */
-
-.app-container {
-    width: 100%;
-    max-width: 400px;
-    /* Typical mobile screen width */
-    min-height: 800px;
-    background-color: #2e7d32;
-    /* A dark-ish green for the header/background */
-    padding: 20px 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    /* Gradient for the top section */
-    background: linear-gradient(to bottom, #4caf50 0%, #2e7d32 40%, #333333 100%);
-}
-
-
-/* --- Header Section (Top Green Area) --- */
-
-.app-header {
-    width: 100%;
-    color: white;
-    padding: 0 20px 40px;
-    text-align: left;
-    box-sizing: border-box;
-}
-
-.profile-icon {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.icon-placeholder {
-    font-size: 24px;
-    color: white;
-}
-
-.app-header h1 {
-    font-size: 32px;
-    margin: 5px 0;
-}
-
-.app-header p {
-    font-size: 18px;
-    margin: 0;
-    opacity: 0.8;
-}
-
-
-/* --- Success Card (White Pop-up) --- */
-
-.success-card {
-    width: 90%;
+/* --- Input Card Section (White Area) --- */
+.input-card {
+    /* ... (Existing styles for the white card) ... */
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px 20px;
-    text-align: center;
-    /* Position the card to overlap the header/darker section */
-    margin-top: -30px;
-    /* Pull it up into the green area */
-    box-sizing: border-box;
-}
-
-.thumbs-up-image {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 20px;
-}
-
-.thumbs-up-img {
-    width: 100%;
-    height: auto;
-    /* If you use an actual image, you might need object-fit: cover; */
-}
-
-.success-message {
-    color: #4caf50;
-    /* Bright green text color */
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-
-/* --- Button Group --- */
-
-.button-group {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    padding-top: 10px;
-}
-
-.btn {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    flex-grow: 1;
-    max-width: 50%;
-    transition: background-color 0.3s;
-}
-
-.btn-skip {
-    background-color: #e0e0e0;
-    /* Light grey/off-white */
-    color: #444;
-}
-
-.btn-complete {
-    background-color: #4caf50;
-    /* Bright green */
-    color: white;
-}
-
-.btn-complete:hover {
-    background-color: #388e3c;
-}
-
-.btn-skip:hover {
-    background-color: #ccc;
-}
-
-
-/* --- Bottom Area (Based on the visible 'SIGN UP' button) --- */
-
-.bottom-area {
-    width: 90%;
+    padding: 30px 25px;
     position: absolute;
-    bottom: 20px;
-    text-align: center;
-    padding-top: 20px;
+    top: 150px; 
+    left: 0;
+    right: 0;
+    border-top-left-radius: 40px; 
+    border-top-right-radius: 40px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2; 
 }
 
-.btn-sign-up {
+/* --- Input Groups with Icons (Reused) --- */
+.input-group {
+    margin-bottom: 15px;
+    display: flex; 
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #F0FFF0; 
+    border-radius: 10px;
+}
+
+/* ... (Existing icon-input and input styles) ... */
+
+/* --- New Styles for Privacy Checkbox --- */
+.privacy-checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px; /* Space above the button */
+    font-size: 14px;
+    color: #666;
+}
+
+.privacy-checkbox-group input[type="checkbox"] {
+    /* Customize the checkbox size and appearance */
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    /* You can use a custom appearance for branding if needed */
+    accent-color: #4CAF50; /* Green accent color for modern browsers */
+}
+
+.privacy-checkbox-group label {
+    line-height: 1.4;
+}
+
+.policy-link {
+    color: #4CAF50; /* Match the FarmLink green */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.policy-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Sign Up Button and Links (Reused) --- */
+.continue-btn {
     width: 100%;
     padding: 15px;
-    background-color: #444;
-    /* Darker grey/black for contrast */
+    background-color: #4CAF50; 
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
-    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.login-link {
-    font-size: 14px;
-    color: white;
-}
-
-.login-link a {
-    color: #a5d6a7;
-    /* Light green link color */
-    text-decoration: none;
-    font-weight: bold;
-}
+/* ... (Existing login-link-text and login-link styles) ... */

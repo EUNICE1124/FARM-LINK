@@ -1,0 +1,199 @@
+/* Basic Reset and Font Setup */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+    /* Dark background to mimic the screen edge */
+}
+
+.welcome-container {
+    width: 100%;
+    max-width: 400px;
+    /* Typical mobile width */
+    height: 100vh;
+    max-height: 800px;
+    position: relative;
+    overflow: hidden;
+    /* To contain the curved card */
+}
+
+
+/* --- Header Section (Green Area) --- */
+
+.header-section {
+    background-color: #4CAF50;
+    /* A bright, farm-friendly green */
+    color: white;
+    padding: 40px 20px 180px;
+    /* Large bottom padding to push content down */
+    position: relative;
+    z-index: 1;
+    /* Keep header content above the card's background */
+}
+
+.user-icon-bg {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white circle */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-icon-bg i {
+    font-size: 24px;
+    color: white;
+}
+
+.greeting {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.welcome-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0 0;
+}
+
+
+/* --- Input Card Section (White Area) --- */
+
+.input-card {
+    background-color: white;
+    padding: 30px 25px;
+    position: absolute;
+    top: 200px;
+    /* Position it to overlap the green section */
+    left: 0;
+    right: 0;
+    /* Create the top curve/border radius */
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    /* Make sure it's on top of the header */
+}
+
+
+/* --- Inputs --- */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 15px;
+    border: none;
+    background-color: #F0FFF0;
+    /* Very light green background */
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group input::placeholder {
+    color: #888;
+}
+
+
+/* Style for the "Location" label */
+
+.location-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.location-input-group {
+    display: flex;
+    gap: 2px;
+    /* Small gap between inputs */
+    margin-bottom: 30px;
+    overflow: hidden;
+    /* Important for containing rounded corners */
+}
+
+.location-input {
+    flex-grow: 1;
+    /* Make inputs share available space */
+    padding: 15px 10px;
+    border: none;
+    background-color: #F0FFF0;
+    /* Match the Full Name input background */
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+
+/* Remove default rounding and set custom for the group edges */
+
+.location-input.left-rounded {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.location-input.right-rounded {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* Remove borders between location inputs */
+
+.location-input:not(:last-child) {
+    border-right: 1px solid #D3D3D3;
+    /* Separator lines */
+}
+
+
+/* --- Buttons and Links --- */
+
+.continue-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    /* Bright green */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #45a049;
+}
+
+.skip-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+    /* Green link color */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.skip-link:hover {
+    opacity: 0.8;
+}
