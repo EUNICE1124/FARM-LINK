@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event && typeof event.preventDefault === 'function') event.preventDefault();
         try {
             const href = logInLink && logInLink.getAttribute && logInLink.getAttribute('href');
-            window.location.href = href || ROUTES.login;
+            window.location.href = href || ROUTES.login;// Navigate to login
         } catch (err) {
             console.error('Navigation to login failed:', err);
         }

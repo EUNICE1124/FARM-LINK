@@ -2,7 +2,7 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
     event.preventDefault(); // Stop the form from submitting normally
     
     // Get form values
-    const userName = document.getElementById('userName').value.trim();
+    const userName = document.getElementById('userName').value.trim();// Trim to remove extra spaces
     const email = document.getElementById('email').value.trim();
     const phoneNumber = document.getElementById('phoneNumber').value.trim();
     const address = document.getElementById('address').value.trim();
@@ -24,9 +24,9 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
         return;
     }
     
-    // 3. Password strength check (Example: minimum 8 characters)
-    if (password.length < 8) {
-        alert('Password must be at least 8 characters long.');
+    // 3. Password strength check (Example: minimum 6 characters)
+    if (password.length < 6) {
+        alert('Password must be at least 6 characters long.');
         return;
     }
 
@@ -37,12 +37,11 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
     }
 
     // --- Submission Logic ---
-    console.log('Sign Up Form Final Submission!');
+    console.log('Sign Up Form Final Submission!');// For debugging purposes
     
-    // In a real application, you would send this data securely to an API
     
     alert('Account Created Successfully! Redirecting to Login.');
-    // window.location.href = '/login';
+    //window.location.href = '/login';
 });
 
 document.querySelector('.login-link').addEventListener('click', function(event) {
